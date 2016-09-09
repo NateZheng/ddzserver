@@ -1,0 +1,65 @@
+package com.server.proto.demo;
+//名字检查请求
+message NameCheckReq {
+	required string name = 1;
+}
+
+message NameCheckResp {
+	required bool isExist = 1 [default = false];
+}
+//发言请求
+message SayHelloReq {
+	required string content = 1;
+}
+//发言回包,应该通知给所有人
+message SayHelloResp {
+	required string speaker = 1; //发言者
+	required string content = 2;
+}
+
+message Player{
+	required string userID = 1;
+	optional string seatNumber = 2;
+	optional string isReady = 3;
+	optional string headPhoto = 4;
+	optional string nickName = 5;
+	optional string netIP = 6;
+	optional string inRoomCoins = 7;
+	optional string isCreator = 8;
+}
+message GameType{
+	required string gamesCategory = 1; //游戏分类
+	required string gameType = 2; //某个游戏的类型
+}
+
+message Room {
+	required string roomNumber = 1;
+}
+
+message CreateRoomReq {
+	required string userID = 1;
+	required GameType gameType = 2; 
+}
+
+message CreateRoomRepl {
+	required string userID = 1;
+	required Room room = 2;
+	required GameType gameType = 3; 
+}
+
+message JoinRoomReq {
+	required string userID = 1;
+	required string roomNumber = 2; 
+}
+
+message JoinRoomRepl {
+	required string userID = 1;
+	required Room room = 2; 
+	repeated Player players = 3;
+}
+
+message JoinRoomBdc {
+	required string roomNumber = 1; 
+	required Player player = 2;
+}
+

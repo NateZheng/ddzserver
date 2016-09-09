@@ -1,0 +1,34 @@
+package com.server.java.action;
+
+public class PlayAction {
+
+	public void doReady(){
+		
+	}
+	
+	public void isCallDizhuByFight(){
+		
+	}
+	
+	public void isCallDizhuByPoints(){
+		
+	}
+	
+	public void doPushCard(){
+		
+	}
+	
+	public void doPassCard(){
+		
+	}
+	
+	public void isAutoPlay(){
+		
+	}
+	
+	public void doExitGame(){
+		
+	}
+	
+	
+}

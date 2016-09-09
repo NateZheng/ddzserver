@@ -1,0 +1,45 @@
+/**
+ * 
+ */
+package com.server.java.action;
+
+/**
+ * @author nate
+ *
+ */
+public class RoomAction {
+
+	public void creatRoom(){
+		
+	}
+	
+	public void joinRoom(){
+		
+	}
+	
+	public void dismissRoom(){
+		
+	}
+	
+	public void refuseDissmissRoom(){
+		
+	}
+	
+	public void agreeDismissRoom(){
+		
+	}
+	
+	
+	
+	
+	
+	
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

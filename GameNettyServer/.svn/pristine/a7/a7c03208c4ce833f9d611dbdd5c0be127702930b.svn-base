@@ -1,0 +1,69 @@
+package com.server.proto.demo;
+//名字检查请求
+message NameCheckReq {
+	required string name = 1;
+}
+
+message NameCheckResp {
+	required bool isExist = 1 [default = false];
+}
+//发言请求
+message SayHelloReq {
+	required string content = 1;
+}
+//发言回包,应该通知给所有人
+message SayHelloResp {
+	required string speaker = 1; //发言者
+	required string content = 2;
+}
+
+message CreateRoomReq {
+	required string userID = 1;
+	required string gamesCategory = 2; //游戏分类
+	required string gameType = 3; //某个游戏的类型
+}
+
+message CreateRoomRepl {
+	required string userID = 1;
+	required string roomNumber = 2;
+	required string gamesCategory = 3; //游戏分类
+	required string gameType = 4; //某个游戏的类型
+}
+
+message JoinRoomReq {
+	required string userID = 1;
+	required string roomNumber = 2; 
+}
+
+message JoinRoomRepl {
+	required string userID = 1;
+	required string roomNumber = 2; 
+	required string userSeatID = 3;
+	required string userInroomCoins = 4;
+	required string roomCreatorID = 5;
+	required string playersInRoom = 6;
+	required string player1UserID = 7;//房主
+	required string player1SeatID = 8;
+	required string player1IsReady = 9;
+	required string player1UserInfo = 10;
+	required string player1InroomCoins = 11;
+	Optional string player2UserID = 12;
+	Optional string player2SeatID = 13;
+	Optional string player2IsReady = 14;
+	Optional string player2UserInfo = 15;
+	Optional string player2InroomCoins = 16;
+	Optional string player3UserID = 17;
+	Optional string player3SeatID = 18;
+	Optional string player3IsReady = 19;
+	Optional string player3UserInfo = 20;
+	Optional string player3InroomCoins = 21;
+}
+
+message JoinRoomBdc {
+	required string playerUserID = 1;
+	required string roomNumber = 2; 
+	required string playerSeatID = 3;
+	required string playerInroomCoins = 4;
+	required string playerUserInfo = 5;
+}
+
